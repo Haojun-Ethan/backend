@@ -34,6 +34,7 @@ if RENDER_EXTERNAL_HOSTNAME:
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 DATABASE_URL = os.environ.get('DATABASE_URL')
+print("DEBUG DATABASE_URL:", repr(DATABASE_URL))
 if DATABASE_URL:
     DATABASES = {
         'default': dj_database_url.parse(DATABASE_URL, conn_max_age=600)
