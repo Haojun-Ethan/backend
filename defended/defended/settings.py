@@ -81,9 +81,7 @@ INSTALLED_APPS = [
     'modules',
     'quizzes',
     'dashboard',
-    'allauth',
-    'allauth.account',
-    'allauth.mfa',
+    
     "corsheaders",
 ]
 
@@ -97,7 +95,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'allauth.account.middleware.AccountMiddleware',
+
 ]
 
 ROOT_URLCONF = 'defended.urls'
@@ -182,11 +180,7 @@ STATIC_URL = 'static/'
 # Email
 # https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration
 
-MAILERS = {
-    'default': {
-        'BACKEND': 'django.core.mail.backends.console.EmailBackend',
-    },
-}
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
