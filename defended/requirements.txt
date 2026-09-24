@@ -1,0 +1,11 @@
+
+Django>=6.1
+djangorestframework
+djangorestframework-simplejwt
+django-cors-headers
+psycopg[binary]
+pyotp
+qrcode[pil]
+gunicorn
+whitenoise
+dj-database-url
